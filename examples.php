@@ -26,20 +26,32 @@ $task[] = $task3;
 
 <html>
     <head>
-        
-    </head>
+        <meta charset="utf-8">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+      
+     </head>
+    
     <body>
         <p> 
             Przykładowe zadania:
         </p>
-            <table border="2px">
-               <?php  foreach($task as $key=>$tasker){
-                   echo"<tr><td>".$tasker->getName()."</td>";
-                   echo"<td>".$tasker->getDescription()."</td></tr>";   
-               } 
-                ?>       
-            </table>
-        
-            
-    <body>
+                <div class="container">
+                    <div class="well">
+                        <table class="table hover">
+                           <?php  foreach($task as $key=>$tasker){
+                               echo"<tr ><td>".$tasker->getName()."</td>";
+                               echo"<td>".$tasker->getDescription()."</td>";
+                               echo"<td><input type='submit' class='btn btn-success btn-lg' method='GET' value='Zrobione!'></input></tr>";   
+                           }  
+                            ?>       
+                        </table>
+                    </div>
+                </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+    </body>
 </html>
