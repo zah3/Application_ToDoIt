@@ -1,24 +1,18 @@
 <?php
-
-
-
 class task{
     
     protected $name = "";
     protected $description ="";
     protected $flag;
     
-    
     public function __construct($name, $description) {
         if(is_string($name) === true && strlen($name) > 0 
-                && is_string($description) === true && strlen($description) > 0 ){
-                $this->name = $name;
-                $this->description = $description;
-                $this->flag = false;
-                
-        
-                
-        echo"<p class='bg-primary'>Zadanie dodane: ".$name. "!<br>O treści:".$description."</p><br>";
+            && is_string($description) === true && strlen($description) > 0 ){
+            $this->name = $name;
+            $this->description = $description;
+            $this->flag = false;
+            
+            echo"<p class='bg-primary'>Zadanie dodane: ".$name. "!<br>O treści:".$description."</p><br>";
         
         
         }else{
@@ -28,7 +22,6 @@ class task{
     
     public function getTask(){
         return $this->flag;
-        
     }
     
     public function finishTask(){
